@@ -128,7 +128,7 @@ class UPGRADE(UI):
                 self.player.current_exp -= self.magic_cost
 
                 self.magic_level_data[self.magic_kind] += 1
-                self.magic_data[self.magic_kind]['strength'] += self.magic_strength_upgrade
+                self.player.magic_hand_damage += self.magic_strength_upgrade
 
                 if self.magic_kind == 'heal':   self.player.free_harm += self.free_harm_upgrade
                 else:   self.player.hand_damage += self.hand_damage_upgrade
